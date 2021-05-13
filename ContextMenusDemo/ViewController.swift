@@ -79,7 +79,7 @@ extension ViewController: UIContextMenuInteractionDelegate {
                                 .collect()
                                 .eraseToAnyPublisher()
                         }
-                        .delay(for: .seconds(2.5), scheduler: DispatchQueue.main)
+                        .delay(for: .seconds(0.5), scheduler: DispatchQueue.main)
                         .receive(on: DispatchQueue.main)
                         .sink { actions in
                             provider(actions)
